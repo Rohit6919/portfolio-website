@@ -2,22 +2,14 @@
   "version": 2,
   "builds": [
     {
-      "src": "frontend/package.json",  // Build the frontend from this folder
-      "use": "@vercel/react"           // Use the React preset for the frontend
-    },
-    {
-      "src": "backend/server.js",      // Backend entry point (Node.js/Express)
-      "use": "@vercel/node"            // Use the Node preset for the backend
+      "src": "server.js",
+      "use": "@vercel/node"
     }
   ],
   "routes": [
     {
-      "src": "/api/(.*)",              // Any API route (backend)
-      "dest": "backend/server.js"      // Direct to the backend server
-    },
-    {
-      "src": "/(.*)",                  // All other routes (frontend)
-      "dest": "frontend/build/$1"      // Redirect to the frontend build directory
+      "src": "/api/contact",
+      "dest": "/server.js"
     }
   ]
 }
