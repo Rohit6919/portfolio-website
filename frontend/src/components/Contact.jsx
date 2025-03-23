@@ -20,7 +20,7 @@ function Contact() {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const response = await axios.post('http://localhost:5000/api/contact', FormData); // Corrected API route
+            const response = await axios.post('https://backendwebsiteportfolio.vercel.app/api/contact', FormData); // Corrected API route
             alert('Message sent successfully! 🎉');
             console.log(response.data);
 
