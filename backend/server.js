@@ -12,7 +12,7 @@ app.use(express.json());
 
 // ✅ Use only the detailed CORS configuration
 app.use(cors({
-  origin: 'http://localhost:3000',  // Allow frontend origin
+  origin: 'https://rohit-portfolio-ivory.vercel.app',  // Match your frontend URL
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
   allowedHeaders: ['Content-Type', 'Authorization']
 }));
