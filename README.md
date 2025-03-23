@@ -25,3 +25,6 @@ This project is a personal portfolio website built with React.js (frontend) and 
 ```bash
 git clone https://github.com/your-username/portfolio-website.git
 cd portfolio-website
+
+## License
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
