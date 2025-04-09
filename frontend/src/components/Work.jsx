@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import project1 from "../assets/project1.png";
+import home from "../assets/home.png";
 
 function Work() {
     const projects = [
@@ -14,10 +15,11 @@ function Work() {
         },
         {
             id: 2,
-            title: "Clone Project",
-            description: "Voluptatem iste molestias expedita rem.",
-            image: project1,
-            link: "#"
+            title: "Stockler - Smart Stock Portfolio Tracker",
+            description: "Stockler is a powerful and user-friendly stock portfolio tracker designed to help investors monitor their holdings, analyze market trends, and receive real-time profit/loss updates. With features like top-up management, daily performance tracking, and personalized alerts, Stockler simplifies stock management for both beginners and experienced traders.",
+            image: home, // make sure you import or define 'stocklerImage' correctly
+            link: "https://eliteprowealth.com/stockler" // replace with actual URL if different
+
         }
     ];
 
@@ -49,13 +51,13 @@ function Work() {
                         initial={{ opacity: 0, y: 50 }}
                         animate={inView ? { opacity: 1, y: 0 } : {}}
                         transition={{ duration: 0.4, delay: index * 0.15 }}
-                        whileHover={{ 
-                            scale: 1.05,                   
-                            transition: { type: "spring", stiffness: 250, damping: 12 }  
+                        whileHover={{
+                            scale: 1.05,
+                            transition: { type: "spring", stiffness: 250, damping: 12 }
                         }}
                         className="bg-gray-900 shadow-lg rounded-lg overflow-hidden w-full max-w-xs sm:max-w-sm md:max-w-md"
                     >
-                        <img 
+                        <img
                             src={project.image}
                             alt={project.title}
                             className="w-full h-40 object-cover sm:h-52 md:h-60"
@@ -67,7 +69,7 @@ function Work() {
                             {/* Change to <a> tag for proper redirection */}
                             <motion.a
                                 href={project.link}
-                                target="_blank" 
+                                target="_blank"
                                 rel="noopener noreferrer"
                                 whileHover={{ scale: 1.1 }}
                                 whileTap={{ scale: 0.95 }}
